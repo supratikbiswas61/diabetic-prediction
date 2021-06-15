@@ -1,0 +1,53 @@
+{%extends "base.html" %} 
+{%block content%} 
+
+<section class="hero">
+    <div class="hero-body">
+        <p class="title">
+            PIMA INDIAN DIABETES PREDICTION
+        </p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">Enter following Values to predict Diabetes </p>
+                    </div>
+                </div>
+                <div class="content">
+    <div class="container my-5 mx-5 px-5">
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="field">
+                <label for="BMI" class="label is-size-4 has-text-weight-light">
+                    BMI:
+                </label>
+                <input type="text" name="BMI" id="BMI" class="input" autofocus>
+            </div>
+            <div class="field">
+                <label for="Blood Pressure" class="label is-size-4 has-text-weight-light">
+                   Blood Pressure:
+                </label>
+                <input type="text" name="blood pressure" id="blood pressure" class="input" autofocus>
+            </div>
+            <div class="field">
+                <label for="Glucose Level" class="label is-size-4 has-text-weight-light">
+                   Glucose Level:
+                </label>
+                <input type="text" name="Glucose Level" id="glucose level" class="input" autofocus>
+            </div>
+            <button type="submit" class="button is-success is-size-5">Predict</button>
+        </form>
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
+

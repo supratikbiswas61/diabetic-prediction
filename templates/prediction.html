@@ -1,0 +1,44 @@
+{%extends "base.html" %} 
+{%block content%} 
+
+<section class="hero">
+    <div class="hero-body">
+        <p class="title">
+           Prediction   
+        </p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <hr>
+                <div class="media">
+                    <div class="media-left">
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Prediction</p>
+                    </div>
+                </div>
+		<div class="content">
+			<div class="container my-5 mx-5 px-5">
+
+    {% if prediction==1 %}
+<hr/>
+    <center><h1>Your Result:</h1><strong><i>Positive!! You have diabetes</i></strong></center>
+{% endif %}
+{% if prediction==0  %}
+<hr/>
+   <center><h2>Your Result:</h2><strong><i>Negative!! You do not have diabetes<br></i></strong></center><br>
+
+{% endif %}
+			</div> 
+		</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
+
